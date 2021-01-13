@@ -1,0 +1,41 @@
+<style>
+  img {
+    width: 100px;
+    height: 100px;
+    background: center/contain no-repeat
+      url('https://www.baidu.com/img/flexible/logo/pc/result.png');
+  }
+
+  img:not([src*='/']) {
+    animation: src0 0.5s 3s both;
+  }
+
+  [src*='/'] {
+    animation: src 0.5s 0.5s both;
+  }
+
+  @keyframes src0 {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes src {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+</style>
+
+<img
+  src=""
+  onclick="this.src='https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2758251609,3997243572&fm=26&gp=0.jpg'"
+/>

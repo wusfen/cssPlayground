@@ -1,0 +1,77 @@
+<style>
+  .w {
+    width: 100%;
+  }
+  .w-1\/4 {
+    width: 25%;
+  }
+  .min-w {
+    min-width: 100%;
+  }
+  .max-w {
+    max-width: 100%;
+  }
+  @media all and (min-width: 768px) {
+    .sm\:w1\/4 {
+      width: 25%;
+    }
+  }
+  .h {
+    height: 100%;
+  }
+  .h-100px {
+    height: 100px;
+  }
+  .b {
+    border: 1px solid #ddd;
+  }
+  .m {
+    margin: 1em;
+  }
+  .p {
+    padding: 1em;
+  }
+  .br {
+    border-radius: 0.5em;
+  }
+  .bg {
+    background: #fff;
+  }
+  .c {
+    color: #333;
+  }
+  .pos {
+    position: relative;
+  }
+  .block {
+    display: block;
+  }
+  .float {
+    float: left;
+  }
+  .o {
+    overflow: hidden;
+  }
+  .op {
+    opacity: 0.5;
+  }
+  .v {
+    visibility: visible;
+  }
+  .z {
+    z-index: 1;
+  }
+  .of-c {
+    object-fit: contain;
+  }
+
+  @media all and (max-width: 480px) {
+    .xs\:hidden {
+      display: none !important;
+    }
+  }
+</style>
+
+<div class="block xs:hidden sm:w-1/4 h-100px m p b br bg c z">
+  text
+</div>

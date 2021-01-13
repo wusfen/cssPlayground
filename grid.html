@@ -1,0 +1,50 @@
+<style>
+  .grid{
+    min-height: 100%;
+    display: grid;
+    grid-gap: 8px;
+    grid:
+      'header  header'
+      'sidebar main' 1fr
+      'footer  footer'
+      / minmax(250px, auto) 1fr;
+    grid:
+      'header'
+      'main' 2fr
+      'sidebar' 1fr
+      'footer'
+      ;
+    grid:
+      'sidebar header'
+      'sidebar main' 1fr
+      'sidebar footer'
+      / minmax(250px, auto) 1fr;
+  }
+  .grid>*{
+    padding: 1em;
+    border: 1px solid #86d7ff;
+    background: #cceeff;
+  }
+  .header{
+    grid-area: header;
+  }
+  .sidebar{
+    grid-area: sidebar;
+  }
+  .main{
+    grid-area: main;
+  }
+  .footer{
+    grid-area: footer;
+  }
+</style>
+<div class="grid">
+  <div class="header">header</div>
+  <div class="sidebar">
+    <div>sidebar</div>
+  </div>
+  <div class="main">
+    <div>main</div>
+  </div>
+  <div class="footer">footer</div>
+</div>
