@@ -31,8 +31,8 @@
   .w {
     width: 100%;
   }
-  .w-1\/4 {
-    width: 25%;
+  .w-1\/2 {
+    width: 50%;
   }
   .nw {
     min-width: 100%;
@@ -40,7 +40,7 @@
   .xw {
     max-width: 100%;
   }
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 640px) {
     .sm\:w-1\/4 {
       width: 25%;
     }
@@ -100,6 +100,10 @@
   .of-c {
     object-fit: contain;
   }
+  .rs-v {
+    overflow: auto;
+    resize: vertical;
+  }
 
   @media all and (max-width: 480px) {
     .xs\:hidden {
@@ -108,6 +112,6 @@
   }
 </style>
 
-<div class="block xs:hidden sm:w-1/4 h-100px o m p b r bg c pos z">
+<div class="w-1/2 sm:w-1/4 h-100px o m p b r bg c pos z rs-v">
   text
 </div>

@@ -20,7 +20,6 @@
         position: sticky;
         top: 0;
         margin-bottom: 1em;
-        color: #aaa;
         background-color: inherit;
         box-shadow: 1px 1px 10px 10px #fff;
       }
@@ -29,6 +28,10 @@
         margin: 1em 0;
       }
     </style>
+    <script src='http://10.1.4.222:3333/src/console.js'"></script>
+    <script>
+      console.show = 1
+    </script>
   </head>
 
   <body>
@@ -214,8 +217,12 @@
           </fieldset>
 
           <fieldset>
-            <label> <input type="radio" name="radio" /> radio </label>
-            <label> <input type="radio" name="radio" checked /> 单选 </label>
+            <label> <input type="color" value="#00aaff" /> color </label>
+          </fieldset>
+
+          <fieldset>
+            <input type="range" />
+            <!-- <input type="range" orient="vertical" /> -->
           </fieldset>
 
           <fieldset>
@@ -223,11 +230,17 @@
           </fieldset>
 
           <fieldset>
+            <label> <input type="radio" name="radio" /> radio </label>
+            <label> <input type="radio" name="radio" checked /> 单选 </label>
+          </fieldset>
+          
+          <fieldset>
             <label> <input type="checkbox" name="checkbox" /> checkbox </label>
             <label>
               <input type="checkbox" name="checkbox" checked /> 复选
             </label>
           </fieldset>
+          
         </form>
       </section>
 
