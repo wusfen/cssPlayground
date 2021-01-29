@@ -1,0 +1,268 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>title</title>
+    <link rel="stylesheet" href="./reset.css" />
+    <style>
+      html body {
+        background: #f7f7f7;
+        padding: 1em;
+      }
+      html section {
+        margin: 2em 0;
+        padding: 1em;
+        background: #fff;
+        border-radius: 4px;
+        box-shadow: 1px 1px 10px #ddd;
+      }
+      html section h2 {
+        position: sticky;
+        top: 0;
+        margin-bottom: 1em;
+        color: #aaa;
+        background-color: inherit;
+        box-shadow: 1px 1px 10px 10px #fff;
+      }
+
+      form fieldset {
+        margin: 1em 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <hgroup>
+        <h1>h1 主标题</h1>
+        <h2>h2 次标题</h2>
+        <h3>h3</h3>
+        <h4>h4</h4>
+        <h5>h5</h5>
+        <h6>h6</h6>
+      </hgroup>
+
+      <picture>banner</picture>
+    </header>
+
+    <aside>
+      <h2>边栏</h2>
+
+      <nav>
+        <ul>
+          <li>导航</li>
+          <li>导航</li>
+        </ul>
+      </nav>
+
+      <nav>
+        <a href=""></a>
+        <a href=""></a>
+      </nav>
+    </aside>
+
+    <main>
+      <section>
+        <h2>列表</h2>
+
+        <ul>
+          <li>A</li>
+          <li>B</li>
+          <li>C</li>
+        </ul>
+
+        <ol>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+        </ol>
+
+        <dl>
+          <div>
+            <dt>key</dt>
+            <dd>value</dd>
+          </div>
+          <div>
+            <dt>key</dt>
+            <dd>value</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section>
+        <h2>表格</h2>
+
+        <table>
+          <tr>
+            <th>th</th>
+            <th>th</th>
+            <th>th</th>
+          </tr>
+          <tr>
+            <td>td</td>
+            <td>td</td>
+            <td>td</td>
+          </tr>
+          <tr>
+            <td>td</td>
+            <td>td</td>
+            <td>td</td>
+          </tr>
+        </table>
+      </section>
+
+      <section>
+        <h2>文章</h2>
+
+        <article>
+          <figure>
+            <img />
+            <figcaption>图片描述</figcaption>
+          </figure>
+
+          <p>段落 <br /></p>
+
+          <hr />
+
+          <blockquote>
+            引用块
+          </blockquote>
+
+          <pre>
+            <code>
+              代码块
+            </code>
+          </pre>
+        </article>
+      </section>
+
+      <section>
+        <h2>文本</h2>
+
+        <div>
+          <span>普通</span>
+          <small>小的</small>
+          <b>注意</b>
+          <em>强调</em>
+          <strong>重要</strong>
+        </div>
+
+        <div>
+          <sup>上标</sup>
+          <span>普通</span>
+          <sub>下标</sub>
+        </div>
+
+        <div>
+          <i></i>
+          <q>引用</q>
+          <cite>作品的引用含标题</cite>
+          w<wbr />br
+        </div>
+
+        <div>
+          <del>删除</del>
+          <ins>插入</ins>
+          <s>不再准确的</s>
+          <u>画出拼写错误</u>
+          <mark>高亮标记</mark>
+          <dfn>述语定义</dfn>
+          <abbr title="这是一个缩写">缩写</abbr>
+        </div>
+
+        <div>
+          <var>变量</var>
+          <code>代码</code>
+          <kbd>键盘</kbd>
+          <output>输出</output>
+          <samp>程序输出</samp>
+          <time>时间</time>
+        </div>
+
+        <div style="resize: both;">
+          a ab abc abcd abcde abcdef abcdefg abcdefgh abcdefghi abcdefghij
+          abcdefghijk abcdefghijkl abcdefghijklm abcdefghijklmn abcdefghijklmno
+          abcdefghijklmnop abcdefghijklmnopq abcdefghijklmnopqr
+          abcdefghijklmnopqrs abcdefghijklmnopqrt abcdefghijklmnopqrtu
+          abcdefghijklmnopqrtuv abcdefghijklmnopqrtuvw abcdefghijklmnopqrtuvwx
+          abcdefghijklmnopqrtuvwxy abcdefghijklmnopqrtuvwxyz
+          abcdefghijklmnopqrtuvwxyz-abcdefghijklmnopqrtuvwxyz
+        </div>
+      </section>
+
+      <section>
+        <h2>表单</h2>
+
+        <form>
+          <fieldset>
+            <input type="text" />
+          </fieldset>
+
+          <fieldset>
+            <textarea></textarea>
+          </fieldset>
+
+          <fieldset>
+            <select name="" id="">
+              <option value="">option</option>
+            </select>
+          </fieldset>
+
+          <fieldset>
+            <input type="text" />
+            <button type="button">按钮</button>
+          </fieldset>
+
+          <fieldset>
+            <label> <input type="radio" name="radio" /> radio </label>
+            <label> <input type="radio" name="radio" checked /> 单选 </label>
+          </fieldset>
+
+          <fieldset>
+            <progress value="50" max="100"></progress>
+          </fieldset>
+
+          <fieldset>
+            <label> <input type="checkbox" name="checkbox" /> checkbox </label>
+            <label>
+              <input type="checkbox" name="checkbox" checked /> 复选
+            </label>
+          </fieldset>
+        </form>
+      </section>
+
+      <section>
+        <h2>注音</h2>
+
+        <p>
+          东亚文字上方注音或字符注释 支持则不显示`rp`
+        </p>
+
+        <ruby>
+          拼<rp>(</rp> <rt>pin</rt> <rp>)</rp> 音<rp>(</rp> <rt>yin</rt>
+          <rp>)</rp>
+          <rtc>（注解）</rtc>
+        </ruby>
+      </section>
+
+      <section>
+        <h2>details</h2>
+
+        <details>
+          <summary>summary</summary>
+          <div>
+            abc
+          </div>
+        </details>
+      </section>
+    </main>
+
+    <footer>
+      <h2>底部</h2>
+
+      <address>地址</address>
+    </footer>
+
+    <script></script>
+  </body>
+</html>

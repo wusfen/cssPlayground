@@ -1,0 +1,38 @@
+<p class="target" style="background:lime;">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipisicing
+  <b class="target"
+    >elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</b
+  >
+  Ut enim ad minim veniam.
+</p>
+
+<button onclick="toggleRadius()">Toggle radius</button>
+
+<svg>
+  <clipPath id="clipping-path-1" clipPathUnits="objectBoundingBox">
+    <circle cx="0.25" cy="0.25" r="0.25" id="circle" />
+    <rect x="0.5" y="0.2" width="0.5" height="0.8" />
+  </clipPath>
+</svg>
+
+<style>
+  .target {
+    /* clip-path: url(#clipping-path-1); */
+  }
+  p {
+    width: 300px;
+    border: 1px solid #000;
+    display: inline-block;
+  }
+</style>
+
+<script>
+  function toggleRadius() {
+    var circle = document.getElementById('circle')
+    circle.r.baseVal.value = 0.4 - circle.r.baseVal.value
+  }
+</script>

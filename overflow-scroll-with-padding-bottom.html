@@ -1,0 +1,28 @@
+<style>
+  ul {
+    box-sizing: border-box;
+    height: 300px;
+    overflow-y: scroll;
+    padding: 100px;
+    background: #eee;
+  }
+  ul:after {
+    content: '';
+    display: block;
+    height: 20px;
+    background: #f80;
+  }
+  li {
+    background: #0af;
+    height: 500px;
+  }
+  ul > :last-child {
+    margin-bottom: 100px;
+  }
+</style>
+
+<ul>
+  <li>
+    火狐会忽略滚动容器的 `padding-bottom`
+  </li>
+</ul>

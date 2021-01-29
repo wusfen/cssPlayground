@@ -1,0 +1,196 @@
+/* ## root */
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font: 16px/1.25 normal;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #333;
+  word-wrap: break-word;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: none;
+}
+
+/* ## all */
+html * {
+  /* remove */
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: none;
+  box-shadow: none;
+  text-decoration: none;
+  /* correct */
+  vertical-align: baseline;
+  /* inherit */
+  box-sizing: inherit;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+}
+
+/* ## pseudo */
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* ## media */
+img,
+figure,
+picture,
+video,
+iframe,
+object,
+embed {
+  display: block;
+  max-width: 100%;
+}
+
+/* ## list */
+ul,
+ol {
+  list-style: none;
+}
+
+dt,
+dd {
+  display: inline-block;
+}
+
+/* ## table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* ## text */
+h1 {
+  font-size: 1.5em;
+}
+h2 {
+  font-size: 1.25em;
+}
+h3 {
+  font-size: 1.2em;
+}
+h4 {
+  font-size: 1.15em;
+}
+h5 {
+  font-size: 1.1em;
+}
+h6 {
+  font-size: 1em;
+}
+del,
+s {
+  text-decoration: line-through;
+  color: #ccc;
+}
+u {
+  text-decoration: underline wavy red;
+}
+rt {
+  font-size: 0.5em;
+}
+mark {
+  background: #ffef65;
+}
+small {
+  font-size: 0.8em;
+}
+sup {
+  font-size: 0.5em;
+  vertical-align: 8px;
+}
+sub {
+  font-size: 0.5em;
+  vertical-align: -8px;
+}
+
+/* ## form */
+label {
+  cursor: pointer;
+}
+
+input {
+}
+input:not([type='radio']):not([type='checkbox']),
+select,
+textarea {
+  /* border: 1px solid #bbb; */
+  -webkit-appearance: none;
+  width: 12em;
+  height: 2em;
+  border-radius: 3px;
+  min-height: 2em;
+  padding: 0.25em 0.5em;
+  background: #eee;
+}
+select {
+}
+textarea {
+  resize: vertical;
+}
+
+[type='radio'],
+[type='checkbox'] {
+  -webkit-appearance: none;
+  width: 1em;
+  height: 1em;
+  padding: 0.25em;
+  border-radius: 50%;
+  border: 1px solid #eee;
+  background-clip: content-box;
+  vertical-align: -0.375ex;
+}
+[type='checkbox'] {
+  border-radius: 3px;
+}
+[type='radio']:checked,
+[type='checkbox']:checked {
+  background-color: #0af;
+}
+
+button {
+  /* border: 1px solid #bbb; */
+  height: 2em;
+  padding: 0.25em 0.75em;
+  border-radius: 3px;
+  background: #eee;
+  cursor: pointer;
+}
+
+/* ## progress */
+progress {
+  width: 12em;
+  height: 0.75em;
+  margin: 0.125em 0;
+  background: #eee;
+  border-radius: 1em;
+  overflow: hidden;
+}
+::-webkit-progress-inner-element {
+  border-radius: inherit;
+}
+::-webkit-progress-bar {
+  background: none;
+}
+::-webkit-progress-value {
+  background: #0af;
+  border-radius: inherit;
+}
+
+/* ## details */
+::-webkit-details-marker {
+  width: 0.5em;
+  height: 0.5em;
+  color: #bbb;
+}
+::marker {
+  width: 0.5em;
+  height: 0.5em;
+  color: #bbb;
+}
