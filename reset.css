@@ -106,7 +106,7 @@ rt {
   font-size: 0.5em;
 }
 mark {
-  background: #ffef65;
+  background: #fdff74;
 }
 small {
   font-size: 0.8em;
@@ -118,6 +118,9 @@ sup {
 sub {
   font-size: 0.5em;
   vertical-align: -8px;
+}
+abbr[title] {
+  text-decoration: underline dotted;
 }
 
 /* ## form */
@@ -175,7 +178,7 @@ textarea {
   border: 1px solid #ddd;
   border-radius: 50%;
   background: #fff;
-  cursor: ew-resize;
+  /* cursor: ew-resize; */
 }
 [type='range'][orient='vertical'] {
   width: 2em;
@@ -192,7 +195,7 @@ textarea {
   border: 1px solid #ddd;
   border-radius: 50%;
   background: #fff;
-  cursor: ns-resize;
+  /* cursor: ns-resize; */
 }
 
 [type='radio'],
@@ -263,15 +266,28 @@ summary {
 
 /* ## code */
 code {
-  background: #353027;
+  background: #272822;
   color: #fff;
   padding: 0 0.375em;
   border-radius: 0.25em;
   margin: 1px;
+  font-size: 0.875em;
 }
 
 pre > code {
   display: block;
+}
+
+kbd {
+  background: #000;
+  color: #fff;
+  padding: 0 0.375em;
+  border-radius: 0.25em;
+  font-size: 0.875em;
+}
+
+var {
+  font-style: italic;
 }
 
 /* ## scrollbar */
