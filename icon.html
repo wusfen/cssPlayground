@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>icon font</title>
+  <!-- <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css"> -->
+  <style>
+    @font-face {
+      font-family: 'iconfont';
+      /* project id 1880602 */
+      font-display: swap;
+      src: url('https://at.alicdn.com/t/font_1880602_wtnowxt6qkn.eot');
+      src: url('https://at.alicdn.com/t/font_1880602_wtnowxt6qkn.eot?#iefix') format('embedded-opentype'),
+        url('https://at.alicdn.com/t/font_1880602_wtnowxt6qkn.woff2') format('woff2'),
+        url('https://at.alicdn.com/t/font_1880602_wtnowxt6qkn.woff') format('woff'),
+        url('https://at.alicdn.com/t/font_1880602_wtnowxt6qkn.ttf') format('truetype'),
+        url('https://at.alicdn.com/t/font_1880602_wtnowxt6qkn.svg#iconfont') format('svg');
+    }
+  </style>
+  <style>
+    body {
+      max-width: 768px;
+      margin: 0 auto;
+    }
+
+    [class^="i-"]:before {
+      content: '.';
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      font-family: iconfont, monospace;
+      font-style: normal;
+      text-align: center;
+    }
+
+    .i-left:before {
+      content: '<';
+    }
+
+    .i-right:before {
+      content: '>';
+    }
+
+    .i-O:before {
+      content: 'O';
+    }
+
+    .i-checked:before {
+      content: 'v';
+    }
+
+    icon {
+      font-family: Linearicons-Free, sans-serif;
+      font-variant-ligatures: normal;
+    }
+
+    .font {
+      font-family: 华文仿宋;
+    }
+
+    @font-face {
+      font-family: font-x;
+      src: local(Courier);
+    }
+
+    @font-face {
+      font-family: font-x;
+      font-style: italic;
+      src: local(STBaoliSC-Regular);
+    }
+
+    @font-face {
+      font-family: font-x;
+      font-weight: bold;
+      src: local(STHeitiSC-Medium);
+    }
+
+    .font-x {
+      font-family: font-x;
+    }
+
+    input[type='checkbox'] {
+      -webkit-appearance: none;
+      font-size: 1em;
+      outline: none;
+    }
+
+    input[type='checkbox']:after {
+      font-family: iconfont;
+      content: "O";
+    }
+
+    input[type='checkbox']:checked:after {
+      font-family: iconfont;
+      content: "v";
+      color: #f10;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>icon</h1>
+  <i class="i-left">
+    < left</i> i
+      <i class="i-left"></i> i
+      <i class="i-right"></i> i
+      <div>
+        <i class="i-checked"></i>
+        中文zbc
+      </div>
+      <icon> &lt; </icon>
+      <icon> ! </icon>
+      <icon> ! </icon>
+      <icon class="lnr lnr-home"> like </icon>
+      <h2>font-family</h2>
+      <div class=""> font 中文</div>
+      <div class="font">.font 中文</div>
+      <div class="font-x">.font-x 中文</div>
+      <div class="font-x" style="font-style: italic;">.font-x 中文</div>
+      <div class="font-x" style="font-weight: bold;">.font-x 中文</div>
+
+      <input type="checkbox" name="" id="">
+      <img src="https://placeimg.com/100/100" alt="">
+
+</body>
+
+</html>

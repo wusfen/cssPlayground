@@ -1,0 +1,33 @@
+<style>
+@font-face {
+  font-family: xxx-Bold;
+  src:
+    local('xxx-Bold'),
+    /* PostScript名称	STKaitiSC-Bold */
+    local('STKaitiSC-Bold'),
+    /* 唯一名称	Kaiti SC Bold */
+    local('Kaiti SC'),
+    local('Wawati SC'),
+    local('Courier');
+  /* font-weight: bold; */
+  /* font-style: italic; */
+}
+p{
+  font-size: 24px;
+  font-family: xxx-Bold;
+  /* font-face 中也有 font-weight 的话，则仅匹配字体，不再加粗 */
+  /* font-weight: bold; */
+  /* font-style: italic; */
+}
+</style>
+
+<body>
+  <h2 id="output"></h2>
+  <h2>font-family: xxx-Bold;</h2>
+  <p>abcdefghijklmnopqrstuvwxzy</p>
+  <p>一二三四五六七八九十</p>
+</body>
+
+<script>
+output.innerHTML = 'default: ' + getComputedStyle(document.body).fontFamily
+</script>

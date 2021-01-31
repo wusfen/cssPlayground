@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="./reset.css" />
+
+<style>
+  input:invalid:not(:placeholder-shown):focus {
+    border-color: orange;
+    color: orange;
+  }
+
+  input:valid:focus {
+    border-color: #04da39;
+    color: #04da39;
+  }
+
+  input:invalid:not(:placeholder-shown) {
+    border-color: red;
+    color: red;
+  }
+
+  :focus-within input:not(:focus):invalid:placeholder-shown {
+    box-shadow: 0 0 1px 1px red;
+  }
+  :focus-within input:focus ~ input:invalid:placeholder-shown {
+    box-shadow: none;
+  }
+
+  input:valid {
+    /* border-color: rgb(0, 255, 0); */
+    /* color: rgb(0, 248, 0); */
+  }
+
+  form:invalid [type='submit'] {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+</style>
+
+<form action="">
+  <!-- <input type="text" placeholder="text" /> -->
+  <input pattern=".." required placeholder=".." />
+  <input pattern="\d{11}" required placeholder="11位手机号" />
+  <input type="url" required placeholder="url" />
+  <button type="submit">button</button>
+</form>

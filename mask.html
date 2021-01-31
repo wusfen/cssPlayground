@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <style>
+    .mask {
+      font-size: 100px;
+      width: 1em;
+      height: 1em;
+      border-radius: 5px;
+      -webkit-mask-size: contain !important;
+      mask-size: contain !important;
+      -webkit-mask: var(--icon);
+      mask: var(--icon);
+      background: currentColor;
+      color: #0af;
+      --icon: url(https://gz-static-1257236698.cos.ap-guangzhou.myqcloud.com/bnx/imgs/icon/bell.png);
+    }
+  </style>
+  <div class="mask" onclick="this.style.color='#'+Math.random().toString(16).slice(-6)"></div>
+  1234234jja
+
+</body>
+
+</html>

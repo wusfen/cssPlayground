@@ -28,7 +28,7 @@
         margin: 1em 0;
       }
     </style>
-    <script src='http://10.1.4.222:3333/src/console.js'"></script>
+    <!-- <script src='http://10.1.4.222:3333/src/console.js'"></script> -->
     <script>
       console.show = 1
     </script>
@@ -127,9 +127,7 @@
 
           <hr />
 
-          <blockquote>
-            引用块
-          </blockquote>
+          <blockquote>引用块</blockquote>
 
           <pre>
             <code>
@@ -182,7 +180,10 @@
           <time>时间</time>
         </div>
 
-        <div style="resize: both;">
+        <div style="width: 300px; height: 300px; resize: both; overflow: auto">
+          <div style="white-space: nowrap">
+            =========================================================
+          </div>
           a ab abc abcd abcde abcdef abcdefg abcdefgh abcdefghi abcdefghij
           abcdefghijk abcdefghijkl abcdefghijklm abcdefghijklmn abcdefghijklmno
           abcdefghijklmnop abcdefghijklmnopq abcdefghijklmnopqr
@@ -217,6 +218,14 @@
           </fieldset>
 
           <fieldset>
+            <input type="number" />
+          </fieldset>
+
+          <fieldset>
+            <input type="date" />
+          </fieldset>
+
+          <fieldset>
             <label> <input type="color" value="#00aaff" /> color </label>
           </fieldset>
 
@@ -233,23 +242,24 @@
             <label> <input type="radio" name="radio" /> radio </label>
             <label> <input type="radio" name="radio" checked /> 单选 </label>
           </fieldset>
-          
+
           <fieldset>
             <label> <input type="checkbox" name="checkbox" /> checkbox </label>
             <label>
               <input type="checkbox" name="checkbox" checked /> 复选
             </label>
           </fieldset>
-          
+
+          <fieldset>
+            <button type="submit" onclick="return false">submit</button>
+          </fieldset>
         </form>
       </section>
 
       <section>
         <h2>注音</h2>
 
-        <p>
-          东亚文字上方注音或字符注释 支持则不显示`rp`
-        </p>
+        <p>东亚文字上方注音或字符注释 支持则不显示`rp`</p>
 
         <ruby>
           拼<rp>(</rp> <rt>pin</rt> <rp>)</rp> 音<rp>(</rp> <rt>yin</rt>
@@ -263,9 +273,7 @@
 
         <details>
           <summary>summary</summary>
-          <div>
-            abc
-          </div>
+          <div>abc</div>
         </details>
       </section>
     </main>

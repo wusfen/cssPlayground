@@ -1,0 +1,24 @@
+<style>
+  :root {
+    --c: #0af;
+    --bg: #f7f7f7;
+    --bdc: #ddd;
+  }
+
+  .class {
+    --bg: #f7f7f7 url('https://gz-static-1257236698.cos.ap-guangzhou.myqcloud.com/bnx/imgs/icon/bell.png');
+    color: var(--c);
+    background: var(--bg);
+    border: 1px solid var(--bdc, #f80);
+    padding: 2em;
+  }
+
+  .class:hover {
+    --c: red;
+    --bg: #eee;
+  }
+</style>
+
+<div class="class" style="--bdc:#0af">
+  class
+</div>
