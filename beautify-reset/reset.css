@@ -233,6 +233,13 @@ textarea {
 ::-moz-number-spin-box {
 }
 
+/* #### date */
+[type='date']:after {
+  content: attr(placeholder);
+  color: #aaa;
+  color: var(--placeholder-color, #aaa);
+}
+
 /* #### color */
 [type='color'] {
   width: 2em;
