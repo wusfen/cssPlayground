@@ -18,7 +18,7 @@
         margin: 2em 0;
         padding: 1em;
         background: var(--background-color);
-        border-radius: 4px;
+        border-radius: var(--border-radius);
         box-shadow: var(--box-shadow);
       }
       html section h2 {
@@ -204,34 +204,49 @@
 
         <form>
           <fieldset>
-            <input type="text" placeholder="placeholder" />
+            <input type="text" required placeholder="text" />
           </fieldset>
 
           <fieldset>
-            <textarea></textarea>
+            <input type="email" placeholder="email" />
+          </fieldset>
+
+          <fieldset>
+            <input type="password" placeholder="password" />
+          </fieldset>
+
+          <fieldset>
+            <input type="search" placeholder="search" />
+          </fieldset>
+
+          <fieldset>
+            <input type="tel" placeholder="tel" />
+          </fieldset>
+
+          <fieldset>
+            <input type="url" placeholder="url" />
+          </fieldset>
+
+          <fieldset>
+            <input type="number" placeholder="number" />
+          </fieldset>
+
+          <fieldset>
+            <input type="date" placeholder="date" />
+          </fieldset>
+
+          <fieldset>
+            <label> <input type="color" value="#00aaff" /> color </label>
+          </fieldset>
+
+          <fieldset>
+            <textarea pattern="abc" placeholder="abc"></textarea>
           </fieldset>
 
           <fieldset>
             <select name="" id="">
               <option value="">option</option>
             </select>
-          </fieldset>
-
-          <fieldset>
-            <input type="text" />
-            <button type="button">按钮</button>
-          </fieldset>
-
-          <fieldset>
-            <input type="number" />
-          </fieldset>
-
-          <fieldset>
-            <input type="date" />
-          </fieldset>
-
-          <fieldset>
-            <label> <input type="color" value="#00aaff" /> color </label>
           </fieldset>
 
           <fieldset>
@@ -260,8 +275,8 @@
           </fieldset>
 
           <fieldset>
-            <button type="button" onclick="return false">button</button>
-            <button type="submit" onclick="return false">submit</button>
+            <button type="button">button</button>
+            <button type="submit" xonclick="return false">submit</button>
           </fieldset>
         </form>
       </section>

@@ -3,21 +3,32 @@
   --color: #444;
   --heading-color: #000;
   --primary-color: #0bf;
+  --success-color: #8f8;
+  --warning-color: #f80;
+  --error-color: #f55;
+  --muted-color: #aaa;
+
   --border-color: rgba(200, 200, 200, 0.5);
+  --border-color: rgba(213, 224, 226, 0.5);
   --border-width: 1px;
   --border-radius: 3px;
+  --focus-border-color: #bbb;
+
   --background-color: #fff;
   --root-background-color: var(--background-color);
+
   --box-shadow: 0px 0px 10px #eee;
+
   --font-size: 16px;
 
-  --input-width: 14em;
+  --input-width: 15em;
   --input-height: 2em;
   --input-border-color: var(--border-color);
   --input-border-width: var(--border-width);
   --input-border-radius: var(--border-radius);
   --input-background-color: var(--background-color);
   --input-box-shadow: 0px 0px 3px -1px #eee;
+  --placeholder-color: var(--muted-color);
 
   --button-height: var(--input-height);
   --button-border-color: var(--input-border-color);
@@ -30,7 +41,7 @@
   --radio-height: 1em;
   --radio-border-color: var(--input-border-color);
   --radio-border-width: var(--input-border-width);
-  --radio-background: border-box var(--input-background-color);
+  --radio-background: content-box var(--input-background-color);
   --radio-checked-background: content-box var(--primary-color);
 
   --checkbox-width: var(--radio-width);
@@ -41,7 +52,7 @@
   --checkbox-checked-background: var(--radio-checked-background);
 
   --progress-bar-height: 0.5em;
-  --progress-bar-background-color: #f1f1f1;
+  --progress-bar-background-color: var(--border-color);
   --progress-bar-value-color: var(--primary-color);
   --progress-bar-box-shadow: var(--input-box-shadow);
 }

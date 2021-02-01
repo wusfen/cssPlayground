@@ -26,11 +26,11 @@ html * {
   text-decoration: none;
   /* correct */
   vertical-align: baseline;
+  text-align: left;
   /* inherit */
   box-sizing: inherit;
   font: inherit;
   color: inherit;
-  text-align: inherit;
 }
 
 /* ## pseudo */
@@ -129,15 +129,6 @@ abbr[title] {
 label {
   cursor: pointer;
 }
-::placeholder {
-  color: #aaa;
-}
-:disabled {
-  opacity: 0.5;
-}
-:focus {
-  /* box-shadow: 0 0 3px var(--primary-color, #0af); */
-}
 
 /* ### input and button */
 input,
@@ -150,6 +141,7 @@ button {
   padding: 0.25em 0.5em;
   border: 1px solid #ddd;
   border-radius: 3px;
+  vertical-align: middle;
   height: var(--input-height, 2em);
   border-width: var(--input-border-width, 1px);
   border-color: var(--input-border-color, #ddd);
@@ -169,15 +161,16 @@ select {
 }
 textarea {
   min-height: 2em;
+  overflow: auto;
   resize: vertical;
   min-height: var(--input-height, 2em);
 }
 
-/* range */
+/* #### range */
 [type='range'] {
   padding: 0;
-  border-color: transparent;
-  background: transparent;
+  border: none;
+  background: none;
   box-shadow: none;
   cursor: pointer;
 }
@@ -231,7 +224,7 @@ textarea {
   margin-left: -6px;
 }
 
-/* type='number' */
+/* #### number */
 ::-webkit-inner-spin-button {
   width: 1.25em;
   height: 2em;
@@ -240,7 +233,7 @@ textarea {
 ::-moz-number-spin-box {
 }
 
-/* color */
+/* #### color */
 [type='color'] {
   width: 2em;
   padding: 0.375em;
@@ -257,7 +250,7 @@ textarea {
   border: none;
 }
 
-/* checkbox */
+/* #### checkbox radio */
 [type='checkbox'],
 [type='radio'] {
   -webkit-appearance: none;
@@ -271,13 +264,17 @@ textarea {
   cursor: pointer;
   width: var(--checkbox-width, 1em);
   height: var(--checkbox-height, 1em);
-  background: var(--checkbox-background, none);
+  border-width: var(--checkbox-border-width, 1px);
+  border-color: var(--checkbox-border-color, #ddd);
+  background: var(--checkbox-background, content-box transparent);
 }
 [type='radio'] {
   border-radius: 50%;
   width: var(--radio-width, 1em);
   height: var(--radio-height, 1em);
-  background: var(--radio-background, none);
+  border-width: var(--radio-border-width, 1px);
+  border-color: var(--radio-border-color, #ddd);
+  background: var(--radio-background, content-box transparent);
 }
 [type='checkbox']:checked {
   background: content-box #0af;
@@ -288,12 +285,13 @@ textarea {
   background: var(--radio-checked-background, content-box #0af);
 }
 
-/* button */
+/* ### button */
 button {
   width: auto;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
   text-align: center;
   cursor: pointer;
-  transition: 0.3s;
   box-shadow: var(--button-box-shadow, none);
 }
 button:active {
@@ -307,6 +305,44 @@ button:active {
   border-color: transparent;
   background-color: #0af;
   background-color: var(--primary-color, #0af);
+}
+
+/* ### status */
+::placeholder {
+  color: #aaa;
+  color: var(--placeholder-color, #aaa);
+}
+:disabled {
+  opacity: 0.5;
+}
+:focus {
+  border-color: var(--focus-border-color);
+}
+:focus::-webkit-slider-thumb {
+  border-color: var(--focus-border-color);
+}
+:focus::-moz-range-thumb {
+  border-color: var(--focus-border-color);
+}
+
+/* ### valid */
+:focus:not(:placeholder-shown):valid {
+  /* color: var(--success-color); */
+}
+:focus:not(:placeholder-shown):invalid {
+  color: var(--warning-color);
+  /* text-decoration: none; */
+}
+:not(form):not(fieldset):not(:focus):not(:placeholder-shown):invalid {
+  color: var(--error-color);
+  border-color: var(--error-color);
+  text-decoration: line-through;
+}
+
+:invalid [type='submit'] {
+  opacity: 0.5;
+  /* pointer-events: none; */
+  cursor: not-allowed;
 }
 
 /* ## progress */
@@ -373,11 +409,13 @@ summary {
   width: 0.5em;
   height: 0.5em;
   color: #ddd;
+  color: var(--border-color, #ddd);
 }
 ::marker {
   width: 0.5em;
   height: 0.5em;
   color: #ddd;
+  color: var(--border-color, #ddd);
 }
 
 /* ## code */
@@ -487,4 +525,10 @@ dl:hover {
 /* ### ms */
 * {
   -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+/* ### transition */
+* {
+  transition-property: color background border opacity transform;
+  transition-duration: 0.3s;
 }
