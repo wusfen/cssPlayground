@@ -4,24 +4,29 @@
     <meta name="viewport" content="width=device-width" />
     <title>title</title>
     <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./theme.css" />
+    <!-- <link rel="stylesheet" href="./theme-dark.css" /> -->
     <style>
+      :root {
+        /* --root-background-color: #f7f7f7; */
+      }
+
       html body {
-        background: #f7f7f7;
         padding: 1em;
       }
       html section {
         margin: 2em 0;
         padding: 1em;
-        background: #fff;
+        background: var(--background-color);
         border-radius: 4px;
-        box-shadow: 1px 1px 10px #ddd;
+        box-shadow: var(--box-shadow);
       }
       html section h2 {
         position: sticky;
         top: 0;
         margin-bottom: 1em;
         background-color: inherit;
-        box-shadow: 1px 1px 10px 10px #fff;
+        box-shadow: 1px 1px 10px 10px var(--background-color);
       }
 
       form fieldset {
@@ -180,7 +185,7 @@
           <time>时间</time>
         </div>
 
-        <div style="width: 300px; height: 300px; resize: both; overflow: auto">
+        <div style="width: 250px; height: 250px; resize: both; overflow: auto">
           <div style="white-space: nowrap">
             =========================================================
           </div>
@@ -235,7 +240,11 @@
           </fieldset>
 
           <fieldset>
-            <progress value="50" max="100"></progress>
+            <progress value="50" max="100">50%</progress>
+          </fieldset>
+
+          <fieldset>
+            <meter value="50" max="100">50%</meter>
           </fieldset>
 
           <fieldset>
@@ -251,6 +260,7 @@
           </fieldset>
 
           <fieldset>
+            <button type="button" onclick="return false">button</button>
             <button type="submit" onclick="return false">submit</button>
           </fieldset>
         </form>
@@ -259,12 +269,14 @@
       <section>
         <h2>注音</h2>
 
-        <p>东亚文字上方注音或字符注释 支持则不显示`rp`</p>
+        <p>注音 支持则不显示`rp`</p>
 
         <ruby>
           拼<rp>(</rp> <rt>pin</rt> <rp>)</rp> 音<rp>(</rp> <rt>yin</rt>
           <rp>)</rp>
-          <rtc>（注解）</rtc>
+          <div>
+            <rtc>（注解）</rtc>
+          </div>
         </ruby>
       </section>
 

@@ -1,0 +1,47 @@
+/* ## var */
+:root {
+  --color: #444;
+  --heading-color: #000;
+  --primary-color: #0bf;
+  --border-color: rgba(200, 200, 200, 0.5);
+  --border-width: 1px;
+  --border-radius: 3px;
+  --background-color: #fff;
+  --root-background-color: var(--background-color);
+  --box-shadow: 0px 0px 10px #eee;
+  --font-size: 16px;
+
+  --input-width: 14em;
+  --input-height: 2em;
+  --input-border-color: var(--border-color);
+  --input-border-width: var(--border-width);
+  --input-border-radius: var(--border-radius);
+  --input-background-color: var(--background-color);
+  --input-box-shadow: 0px 0px 3px -1px #eee;
+
+  --button-height: var(--input-height);
+  --button-border-color: var(--input-border-color);
+  --button-border-width: var(--input-border-width);
+  --button-border-radius: var(--input-border-radius);
+  --button-background-color: var(--input-background-color);
+  --button-box-shadow: var(--input-box-shadow);
+
+  --radio-width: 1em;
+  --radio-height: 1em;
+  --radio-border-color: var(--input-border-color);
+  --radio-border-width: var(--input-border-width);
+  --radio-background: border-box var(--input-background-color);
+  --radio-checked-background: content-box var(--primary-color);
+
+  --checkbox-width: var(--radio-width);
+  --checkbox-height: var(--radio-height);
+  --checkbox-border-color: var(--radio-border-color);
+  --checkbox-border-width: var(--radio-border-width);
+  --checkbox-background: var(--radio-background);
+  --checkbox-checked-background: var(--radio-checked-background);
+
+  --progress-bar-height: 0.5em;
+  --progress-bar-background-color: #f1f1f1;
+  --progress-bar-value-color: var(--primary-color);
+  --progress-bar-box-shadow: var(--input-box-shadow);
+}

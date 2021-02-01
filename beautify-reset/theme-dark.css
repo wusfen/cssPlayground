@@ -1,0 +1,33 @@
+/* ## var */
+:root {
+  --color: #aaa;
+  --heading-color: #fff;
+  --primary-color: #0bf;
+  --border-color: rgba(200, 200, 200, 0.5);
+  --border-width: 1px;
+  --border-radius: 3px;
+  --background-color: #272822;
+  --root-background-color: #191a16;
+  --box-shadow: 0px 0px 3px #555;
+  --font-size: 16px;
+
+  --input-width: 14em;
+  --input-height: 2em;
+  --input-border-color: var(--border-color);
+  --input-border-width: var(--border-width);
+  --input-border-radius: var(--border-radius);
+  --input-background-color: var(--background-color);
+  --input-box-shadow: 0px 0px 3px -1px #eee;
+
+  --button-height: var(--input-height);
+  --button-border-color: var(--input-border-color);
+  --button-border-width: var(--input-border-width);
+  --button-border-radius: var(--input-border-radius);
+  --button-background-color: var(--input-background-color);
+  --button-box-shadow: var(--input-box-shadow);
+
+  --progress-bar-height: 0.5em;
+  --progress-bar-background-color: #f1f1f1;
+  --progress-bar-value-color: var(--primary-color);
+  --progress-bar-box-shadow: var(--input-box-shadow);
+}
