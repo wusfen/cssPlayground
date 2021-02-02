@@ -10,8 +10,7 @@ html {
   -webkit-tap-highlight-color: transparent;
   -webkit-text-size-adjust: none;
   color: var(--color, #444);
-  background: var(--root-background-color, #fff);
-  font-size: var(--font-size, 16px);
+  background: var(--root-background, #fff);
 }
 
 /* ## all */
@@ -143,10 +142,9 @@ button {
   border-radius: 3px;
   vertical-align: middle;
   height: var(--input-height, 2em);
-  border-width: var(--input-border-width, 1px);
-  border-color: var(--input-border-color, #ddd);
+  border: var(--input-border, 1px solid #ddd);
   border-radius: var(--input-border-radius, 3px);
-  background: var(--input-background-color, transparent);
+  background: var(--input-background, transparent);
 }
 
 /* ### input */
@@ -174,13 +172,16 @@ textarea {
   box-shadow: none;
   cursor: pointer;
 }
+input[type='range'] {
+  border: none;
+}
 
 ::-webkit-slider-runnable-track {
   height: 0.5em;
   border-radius: 1em;
   background: #eee;
   height: var(--progress-bar-height, 0.5em);
-  background: var(--progress-bar-background-color, #eee);
+  background: var(--progress-bar-background, #eee);
   box-shadow: var(--progress-bar-box-shadow, none);
 }
 ::-moz-range-track {
@@ -188,7 +189,7 @@ textarea {
   border-radius: 1em;
   background: #eee;
   height: var(--progress-bar-height, 0.5em);
-  background: var(--progress-bar-background-color, #eee);
+  background: var(--progress-bar-background, #eee);
   box-shadow: var(--progress-bar-box-shadow, none);
 }
 
@@ -201,7 +202,8 @@ textarea {
   border-radius: 50%;
   background: #fff;
   margin-top: calc((-1em + var(--progress-bar-height, 0.5em)) / 2);
-  border-color: var(--input-border-color, #ddd);
+  border: var(--input-border, 1px solid #ddd);
+  box-shadow: var(--input-box-shadow, none);
 }
 ::-moz-range-thumb {
   width: 1em;
@@ -210,7 +212,8 @@ textarea {
   border-radius: 50%;
   background: #fff;
   margin-top: calc((-1em + var(--progress-bar-height)) / 2);
-  border-color: var(--input-border-color, #ddd);
+  border: var(--input-border, 1px solid #ddd);
+  box-shadow: var(--input-box-shadow, none);
 }
 
 [type='range'][orient='vertical'] {
@@ -262,6 +265,7 @@ textarea {
 [type='radio'] {
   -webkit-appearance: none;
   appearance: none;
+  flex: none;
   width: 1em;
   height: 1em;
   padding: 0.25em;
@@ -271,16 +275,14 @@ textarea {
   cursor: pointer;
   width: var(--checkbox-width, 1em);
   height: var(--checkbox-height, 1em);
-  border-width: var(--checkbox-border-width, 1px);
-  border-color: var(--checkbox-border-color, #ddd);
+  border: var(--checkbox-border, 1px solid #ddd);
   background: var(--checkbox-background, content-box transparent);
 }
 [type='radio'] {
   border-radius: 50%;
   width: var(--radio-width, 1em);
   height: var(--radio-height, 1em);
-  border-width: var(--radio-border-width, 1px);
-  border-color: var(--radio-border-color, #ddd);
+  border: var(--radio-border, 1px solid #ddd);
   background: var(--radio-background, content-box transparent);
 }
 [type='checkbox']:checked {
@@ -310,8 +312,8 @@ button:active {
 [type='submit'] {
   color: #fff;
   border-color: transparent;
-  background-color: #0af;
-  background-color: var(--primary-color, #0af);
+  background: #0af;
+  background: var(--primary-color, #0af);
 }
 
 /* ### status */
@@ -319,17 +321,28 @@ button:active {
   color: #aaa;
   color: var(--placeholder-color, #aaa);
 }
+option:checked {
+  color: #ddd;
+  color: var(--disabled-color, #ddd);
+}
+option:first-child[value=''],
+option:first-child:not([value]) {
+  color: #aaa;
+  color: var(--placeholder-color, #aaa);
+}
+
 :disabled {
   opacity: 0.5;
 }
+
 :focus {
-  border-color: var(--focus-border-color);
+  border: var(--focus-border, solid 1px #bbb);
 }
 :focus::-webkit-slider-thumb {
-  border-color: var(--focus-border-color);
+  border: var(--focus-border, solid 1px #bbb);
 }
 :focus::-moz-range-thumb {
-  border-color: var(--focus-border-color);
+  border: var(--focus-border, solid 1px #bbb);
 }
 
 /* ### valid */
@@ -362,7 +375,7 @@ progress {
   background: #eee;
   width: var(--input-width, 12em);
   height: var(--progress-bar-height, 0.5em);
-  background: var(--progress-bar-background-color, #eee);
+  background: var(--progress-bar-background, #eee);
   box-shadow: var(--progress-bar-box-shadow, none);
 }
 ::-webkit-progress-inner-element {
@@ -374,11 +387,11 @@ progress {
 
 ::-webkit-progress-value {
   background: #0af;
-  background: var(--progress-bar-value-color, #0af);
+  background: var(--progress-bar-value-background, #0af);
 }
 ::-moz-progress-bar {
   background: #0af;
-  background: var(--progress-bar-value-color, #0af);
+  background: var(--progress-bar-value-background, #0af);
 }
 
 /* ## meter */
@@ -391,21 +404,25 @@ meter {
   background: #eee;
   width: var(--input-width, 12em);
   height: var(--progress-bar-height, 0.5em);
-  background: var(--progress-bar-background-color, #eee);
+  background: var(--progress-bar-background, #eee);
   box-shadow: var(--progress-bar-box-shadow, none);
 }
 ::-webkit-meter-inner-element {
+  height: 9ex;
 }
 ::-webkit-meter-bar {
+  height: 9ex;
+  border: none;
+  border-radius: 0;
   background: none;
 }
 ::-webkit-meter-optimum-value {
   background: #0af;
-  background: var(--progress-bar-value-color, #0af);
+  background: var(--progress-bar-value-background, #0af);
 }
 :-moz-meter-optimum::-moz-meter-bar {
   background: #0af;
-  background: var(--progress-bar-value-color, #0af);
+  background: var(--progress-bar-value-background, #0af);
 }
 
 /* ## details */
@@ -485,18 +502,18 @@ var {
   }
 
   :hover::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.2);
   }
   ::-webkit-scrollbar-thumb:hover {
-    /* background-color: rgba(0, 0, 0, 0.4); */
+    /* background: rgba(0, 0, 0, 0.4); */
     border-width: 0;
   }
   ::-webkit-scrollbar-thumb:active {
-    background-color: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.4);
   }
 
   html:hover body::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.4);
     /* border-width: 0px; */
   }
 }
@@ -534,8 +551,16 @@ dl:hover {
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
-/* ### transition */
+/* ## selection */
+::selection {
+  color: #fff;
+  background: #0af;
+  background: var(--primary-color, #0af);
+}
+
+/* ## transition */
 * {
-  transition-property: color background border opacity transform;
   transition-duration: 0.3s;
+  transition-property: max-height, min-height, color, background, border,
+    box-shadow, transform, stroke, stroke-dasharray, fill;
 }
