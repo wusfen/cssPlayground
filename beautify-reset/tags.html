@@ -5,10 +5,11 @@
     <title>title</title>
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./theme.css" />
-    <!-- <link rel="stylesheet" href="./theme-dark.css" /> -->
+    <link rel="stylesheet" href="./theme-dark.css" />
     <style>
       :root {
         /* --root-background-color: #f7f7f7; */
+        --input-background: rgba(51, 51, 51, 0.5);
       }
 
       html body {
@@ -33,9 +34,11 @@
         margin: 1em 0;
       }
     </style>
-    <script src='http://10.1.4.222:3333/src/console.js'"></script>
+    <!-- <script src="http://10.1.4.222:3333/src/console.js"></script> -->
     <script>
       console.show = 1
+
+      // setInterval('debugger')
     </script>
   </head>
 
@@ -232,7 +235,19 @@
           </fieldset>
 
           <fieldset>
-            <input type="date" placeholder="date" />
+            <input type="date" placeholder="date" pattern="yyyy/MM/dd" />
+          </fieldset>
+
+          <fieldset>
+            <input type="month" placeholder="month" />
+          </fieldset>
+
+          <fieldset>
+            <input type="week" placeholder="week" />
+          </fieldset>
+
+          <fieldset>
+            <input type="time" placeholder="time" />
           </fieldset>
 
           <fieldset>
