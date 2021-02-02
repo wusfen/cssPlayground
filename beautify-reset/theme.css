@@ -44,8 +44,8 @@
   --radio-width: var(--checkbox-width);
   --radio-height: var(--checkbox-height);
   --radio-border: var(--checkbox-border);
-  --radio-background: var(--checkbox-background);
-  --radio-checked-background: var(--checkbox-checked-background);
+  --radio-background: content-box transparent;
+  --radio-checked-background: content-box var(--primary-color);
 
   --progress-bar-height: 0.5em;
   --progress-bar-background: var(--border-color);
