@@ -311,7 +311,9 @@ button {
   padding-right: 0.75em;
   text-align: center;
   cursor: pointer;
-  box-shadow: var(--button-box-shadow, none);
+  border: var(--button-border, 1px solid #ddd);
+  border-radius: var(--button-border-radius, 3px);
+  background: var(--button-background, none);
 }
 button:active {
   transform: scale(0.95);
