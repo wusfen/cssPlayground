@@ -2,7 +2,7 @@
 :root {
   --color: #444;
   --heading-color: #000;
-  --primary-color: #0bf;
+  --primary-color: #64bcdc;
   --success-color: #8f8;
   --warning-color: #f80;
   --error-color: #f55;
@@ -15,7 +15,7 @@
 
   --border: solid 1px var(--border-color);
   --border-radius: 3px;
-  --focus-border: solid 1px #bbb;
+  --focus-border: solid 1px var(--primary-color);
 
   --background: var(--background-color);
   --root-background: var(--background);

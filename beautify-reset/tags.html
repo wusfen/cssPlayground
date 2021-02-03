@@ -12,6 +12,8 @@
       }
 
       html body {
+        width: 888px;
+        margin: auto;
         padding: 1em;
       }
       html section {
@@ -138,7 +140,7 @@
 
           <pre>
             <code>
-              代码块
+function fun(){}
             </code>
           </pre>
         </article>
@@ -237,11 +239,11 @@
             <input type="date" placeholder="date" pattern="yyyy/MM/dd" />
           </fieldset>
 
-          <fieldset>
+          <fieldset hidden>
             <input type="month" placeholder="month" />
           </fieldset>
 
-          <fieldset>
+          <fieldset hidden>
             <input type="week" placeholder="week" />
           </fieldset>
 
@@ -250,15 +252,42 @@
           </fieldset>
 
           <fieldset>
+            <input type="file" placeholder="file" />
+          </fieldset>
+
+          <fieldset>
             <label> <input type="color" value="#00aaff" /> color </label>
           </fieldset>
 
-          <fieldset>
-            <textarea pattern="abc" placeholder="abc"></textarea>
+          <fieldset hidden>
+            <input type="image" src="" />
           </fieldset>
 
           <fieldset>
-            <select name="" id="">
+            <textarea pattern="xxx" placeholder="textarea"></textarea>
+          </fieldset>
+
+          <fieldset>
+            <textarea rows="2" pattern="xxx" placeholder="textarea"></textarea>
+          </fieldset>
+
+          <fieldset>
+            <div contenteditable="true" placeholder="contenteditable"></div>
+          </fieldset>
+
+          <fieldset>
+            <select>
+              <option value="">select</option>
+              <option value="1">option 1</option>
+              <option value="2">option 2</option>
+              <option value="3">option 3</option>
+              <option value="4">option 4</option>
+              <option value="5">option 5</option>
+            </select>
+          </fieldset>
+
+          <fieldset>
+            <select multiple>
               <option value="">select</option>
               <option value="1">option 1</option>
               <option value="2">option 2</option>

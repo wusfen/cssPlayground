@@ -65,6 +65,7 @@ dd {
 table {
   width: 100%;
   border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* ## text */
@@ -133,9 +134,18 @@ label {
 }
 
 /* ### input and button */
+.input {
+  -webkit-user-modify: read-write;
+  -webkit-user-modify: read-write-plaintext-only;
+  -moz-user-modify: read-write;
+  -moz-user-modify: read-write-plaintext-only;
+  user-modify: read-write;
+  user-modify: read-write-plaintext-only;
+}
 input,
 select,
 textarea,
+[contenteditable],
 button {
   -webkit-appearance: none;
   appearance: none;
@@ -153,18 +163,25 @@ button {
 /* ### input */
 input,
 select,
-textarea {
+textarea,
+[contenteditable] {
   width: 12em;
   width: var(--input-width, 12em);
   box-shadow: var(--input-box-shadow, none);
 }
 select {
 }
-textarea {
+textarea,
+[contenteditable] {
   min-height: 2em;
   overflow: auto;
   resize: vertical;
   min-height: var(--input-height, 2em);
+}
+[rows],
+[multiple],
+[contenteditable] {
+  height: auto;
 }
 
 /* #### range */
@@ -241,6 +258,23 @@ input[type='range'] {
 
 /* TODO #### date */
 [type='date']:after {
+  /* content: attr(placeholder); */
+  color: #aaa;
+  color: var(--placeholder-color, #aaa);
+}
+
+/* #### file */
+::-webkit-file-upload-button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: none;
+  pointer-events: none;
+  color: inherit;
+  color: var(--placeholder-color, inherit);
+}
+[type='file']::before {
   /* content: attr(placeholder); */
   color: #aaa;
   color: var(--placeholder-color, #aaa);
@@ -330,28 +364,52 @@ button:only-of-type {
 }
 
 /* ### status */
+:disabled {
+  opacity: 0.5;
+}
+
+/* ### placeholder */
 ::placeholder {
   opacity: 1;
+  line-height: normal;
   color: #aaa;
   color: var(--placeholder-color, #aaa);
 }
 :blank {
   /* future */
 }
-option:checked {
-  color: #0af;
-  color: var(--primary-color, #0af);
-}
 option:first-child[value=''],
 option:first-child:not([value]) {
   color: #aaa;
   color: var(--placeholder-color, #aaa);
 }
-
-:disabled {
-  opacity: 0.5;
+::-webkit-datetime-edit {
+  /* color: #aaa; */
+  /* color: var(--placeholder-color, #aaa); */
+}
+/* date: / */
+::-webkit-datetime-edit-text {
+  display: inline-block;
+  width: 0.75em;
+  text-align: center;
+  color: #aaa;
+  color: var(--placeholder-color, #aaa);
 }
 
+/* #### contenteditable */
+[contenteditable]:empty:before {
+  content: attr(placeholder);
+  color: #aaa;
+  color: var(--placeholder-color, #aaa);
+}
+
+/* ### checked */
+option:checked {
+  color: #0af;
+  color: var(--primary-color, #0af);
+}
+
+/* ### focus */
 :focus {
   border: var(--focus-border, solid 1px #bbb);
 }
