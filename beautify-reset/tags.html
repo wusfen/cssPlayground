@@ -255,7 +255,14 @@ function fun(){}
           </fieldset>
 
           <fieldset>
-            <label> <input type="color" value="#00aaff" /> color </label>
+            <label>
+              <input
+                type="color"
+                value="#00aaff"
+                onchange="document.documentElement.style.setProperty('--primary-color', this.value)"
+              />
+              color
+            </label>
           </fieldset>
 
           <fieldset hidden>

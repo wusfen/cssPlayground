@@ -1,0 +1,33 @@
+<style>
+  .parent {
+    width: 400px;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 60px;
+  }
+
+  .parent.lh-1em {
+    line-height: 1em;
+    border: solid red 10px;
+  }
+
+  .parent.lh-1 {
+    line-height: 1;
+    border: solid limegreen 10px;
+  }
+
+  .child {
+    font-size: 30px;
+    border: 1px solid;
+  }
+</style>
+
+<div class="parent lh-1em">
+  parent lh-1em
+  <div class="child">child child child child child</div>
+</div>
+
+<div class="parent lh-1">
+  parent lh-1
+  <div class="child">child child child child child</div>
+</div>

@@ -153,6 +153,8 @@ button {
   height: 2em;
   padding: 0.25em 0.5em;
   border: 1px solid #ddd;
+  line-height: calc(2em - 0.5em - 2px);
+  line-height: calc(var(--input-height, 2em) - 0.5em - 2px);
   border-radius: 3px;
   vertical-align: middle;
   height: var(--input-height, 2em);
@@ -172,6 +174,15 @@ textarea,
 }
 select {
 }
+option {
+  padding: 0.5em 0.375em;
+  border-radius: 3px;
+  margin: 1px 0;
+}
+option:checked {
+  color: #0af;
+  color: var(--primary-color, #0af);
+}
 textarea,
 [contenteditable] {
   min-height: 2em;
@@ -187,6 +198,8 @@ textarea,
 
 /* #### range */
 [type='range'] {
+  /* height: auto; */
+  /* margin: 0.75em 0; */
   padding: 0;
   border: none;
   background: none;
@@ -203,6 +216,7 @@ input[type='range'] {
   background: #eee;
   height: var(--progress-bar-height, 0.5em);
   background: var(--progress-bar-background, #eee);
+  background: var(--primary-color, #0af);
   box-shadow: var(--progress-bar-box-shadow, none);
 }
 ::-moz-range-track {
@@ -372,7 +386,7 @@ button:only-of-type {
 /* ### placeholder */
 ::placeholder {
   opacity: 1;
-  line-height: normal;
+  /* line-height: normal; */
   color: #aaa;
   color: var(--placeholder-color, #aaa);
 }
@@ -402,12 +416,6 @@ option:first-child:not([value]) {
   content: attr(placeholder);
   color: #aaa;
   color: var(--placeholder-color, #aaa);
-}
-
-/* ### checked */
-option:checked {
-  color: #0af;
-  color: var(--primary-color, #0af);
 }
 
 /* ### focus */
